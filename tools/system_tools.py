@@ -17,4 +17,17 @@ def run_command(cmd):
 
 
 def open_app(name):
-    return run_command(f"start {name}")
+    apps = {
+        "notepad": "notepad",
+        "chrome": "chrome",
+        "cmd": "cmd",
+        "calculator": "calc",
+        "paint": "mspaint"
+    }
+
+    name = name.lower().strip()
+
+    if name in apps:
+        return run_command(f"start {apps[name]}")
+    else:
+        return f"❌ Unknown app: {name}"

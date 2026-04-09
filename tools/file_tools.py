@@ -16,3 +16,18 @@ def write_file(path, content):
         return "File written"
     except Exception as e:
         return str(e)
+
+
+def get_current_directory():
+    try:
+        return os.getcwd()
+    except Exception as e:
+        return str(e)
+
+
+def list_files(path="."):
+    try:
+        files = os.listdir(path)
+        return "\n".join(files)
+    except Exception as e:
+        return str(e)
