@@ -1,5 +1,8 @@
 import subprocess
 from config.settings import DANGEROUS_COMMANDS
+import pyautogui
+import time
+import subprocess
 
 
 def run_command(cmd):
@@ -17,17 +20,42 @@ def run_command(cmd):
 
 
 def open_app(name):
-    apps = {
-        "notepad": "notepad",
-        "chrome": "chrome",
-        "cmd": "cmd",
-        "calculator": "calc",
-        "paint": "mspaint"
-    }
+    try:
+        subprocess.Popen(f"start {name}", shell=True)
 
-    name = name.lower().strip()
+        time.sleep(4)  # 🔥 increase delay
 
-    if name in apps:
-        return run_command(f"start {apps[name]}")
-    else:
-        return f"❌ Unknown app: {name}"
+        return "App opened"
+    except Exception as e:
+        return str(e)
+
+
+def type_text(text):
+    try:
+        print("Typing started...")
+
+        time.sleep(2)
+
+        # 🔥 Click center of screen (Notepad area)
+        screen_width, screen_height = pyautogui.size()
+        pyautogui.click(screen_width // 2, screen_height // 2)
+
+        time.sleep(1)
+
+        pyautogui.write(text, interval=0.05)
+
+        print("Typing done")
+        return "Typed text"
+
+    except Exception as e:
+        return str(e)
+
+
+def save_file():
+    try:
+        pyautogui.hotkey('ctrl', 's')
+        time.sleep(1)
+        pyautogui.press('enter')
+        return "File saved"
+    except Exception as e:
+        return str(e)

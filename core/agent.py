@@ -6,6 +6,8 @@ from tools.web_tools import search_web
 from core.memory import save_memory, read_memory
 from core.planner import create_plan
 from tools.file_tools import get_current_directory, list_files
+from tools.system_tools import open_app, type_text, save_file
+import time
 
 conversation_history = []
 
@@ -61,36 +63,43 @@ Otherwise reply normally.
 """
 
 
+import time
+
 def chat(user_message):
-    # Step 1: create simple plan (no LLM if you followed fix)
     plan = create_plan(user_message)
 
-    print("\n🧠 Plan:\n", plan)
+    print("\n🧠 Plan:")
+    for step in plan:
+        print("-", step)
 
-    # Step 2: ask AI to execute ONLY first step
-    prompt = f"""
-User request: {user_message}
+    for step in plan:
+        if ":" not in step:
+            continue
 
-Execute the FIRST step only.
-Use tools if needed.
-"""
+        tool, inp = step.split(":", 1)
 
-    response = ollama.chat(
-        model=MODEL,
-        messages=[
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": prompt}
-        ]
-    )
+        tool_map = {
+            "open_app": open_app,
+            "type_text": type_text,   # ✅ IMPORTANT
+            "save_file": lambda x: save_file(),
+            "write_file": lambda x: write_file(*x.split("|", 1)),
+            "read_file": read_file,
+            "run_command": run_command,
+        }
 
-    reply = response["message"]["content"]
+        if tool in tool_map:
+            print(f"Running: {tool} ({inp})")
 
-    # Step 3: tool execution
-    if reply.startswith("TOOL:"):
-        result = handle_tool(reply)
-        return f"✅ Executed:\n{result}"
+            result = tool_map[tool](inp)
 
-    return reply
+            print(f"{tool} → {result}")
+
+            time.sleep(2)  # ✅ important delay
+
+        else:
+            print(f"Unknown step: {step}")
+
+    return "✅ Done"
 
 
 def handle_tool(reply):
@@ -108,6 +117,8 @@ def handle_tool(reply):
         "read_memory": lambda x: read_memory(),
         "get_current_directory": lambda x: get_current_directory(),
         "list_files": list_files,
+        "type_text": type_text,
+        "save_file": lambda x: save_file(),
     }
 
     if tool in tools:
