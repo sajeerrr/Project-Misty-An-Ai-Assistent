@@ -1,5 +1,5 @@
-MODEL = "llama3"
+from . import BLOCKED_COMMAND_FRAGMENTS, MODEL_NAME
 
-DANGEROUS_COMMANDS = [
-    "del", "format", "shutdown", "rm", "rd"
-]
+
+MODEL = MODEL_NAME
+DANGEROUS_COMMANDS = BLOCKED_COMMAND_FRAGMENTS

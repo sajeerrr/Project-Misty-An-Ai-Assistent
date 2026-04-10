@@ -1,3 +1,67 @@
+# ----------------------
+# 🐍 Python
+# ----------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
 venv/
-**/__pycache__/
-*.py[cod]
+.env/
+
+# ----------------------
+# 🧠 AI MODELS (VERY IMPORTANT)
+# ----------------------
+models/
+*.bin
+*.pt
+*.pth
+
+# Whisper / Coqui cache
+.cache/
+tts_models/
+
+# ----------------------
+# 🔊 AUDIO FILES
+# ----------------------
+*.wav
+*.mp3
+*.flac
+
+# ----------------------
+# 📸 Screenshots / Images
+# ----------------------
+*.png
+*.jpg
+
+# ----------------------
+# 📝 Logs & Temp
+# ----------------------
+*.log
+temp/
+tmp/
+
+# ----------------------
+# 💻 OS FILES
+# ----------------------
+.DS_Store
+Thumbs.db
+
+# ----------------------
+# 🧰 IDE FILES
+# ----------------------
+.vscode/
+.idea/
+
+# ----------------------
+# 📦 Build / Dist
+# ----------------------
+build/
+dist/
+
+# ----------------------
+# 🔐 Secrets (IMPORTANT)
+# ----------------------
+.env
+config/secrets.py

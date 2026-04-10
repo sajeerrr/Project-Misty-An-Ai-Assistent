@@ -1,0 +1,106 @@
+2026-04-10 12:30:55,039 | agent | WARNING | Ollama chat failed: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/chat (Caused by NewConnectionError("HTTPConnection(host='localhost', port=11434): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+2026-04-10 12:30:55,039 | memory | INFO | Saved conversation history with 1 messages
+2026-04-10 12:30:55,039 | memory | INFO | Saved conversation history with 2 messages
+2026-04-10 12:31:46,664 | agent | WARNING | Ollama chat failed: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/chat (Caused by NewConnectionError("HTTPConnection(host='localhost', port=11434): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+2026-04-10 12:31:46,668 | memory | INFO | Saved conversation history with 3 messages
+2026-04-10 12:31:46,670 | memory | INFO | Saved conversation history with 4 messages
+2026-04-10 12:33:12,094 | memory | INFO | Saved conversation history with 5 messages
+2026-04-10 12:33:12,094 | memory | INFO | Saved conversation history with 6 messages
+2026-04-10 12:33:32,228 | memory | INFO | Saved conversation history with 7 messages
+2026-04-10 12:33:32,228 | memory | INFO | Saved conversation history with 8 messages
+2026-04-10 12:33:53,387 | agent | INFO | Ran tool 'open_url' with input 'https://www.youtube.com/watch?v=VIDEO_ID_HERE (replace VIDEO_ID_HERE with the actual ID of the video you want to play)'
+2026-04-10 12:34:03,711 | memory | INFO | Saved conversation history with 9 messages
+2026-04-10 12:34:03,715 | memory | INFO | Saved conversation history with 10 messages
+2026-04-10 12:34:18,138 | memory | INFO | Saved conversation history with 11 messages
+2026-04-10 12:34:18,139 | memory | INFO | Saved conversation history with 12 messages
+2026-04-10 12:40:34,615 | memory | INFO | Saved conversation history with 13 messages
+2026-04-10 12:40:34,615 | memory | INFO | Saved conversation history with 14 messages
+2026-04-10 12:42:11,628 | agent | INFO | Ran tool 'open_spotify' with input ''
+2026-04-10 12:42:17,194 | memory | INFO | Saved conversation history with 15 messages
+2026-04-10 12:42:17,195 | memory | INFO | Saved conversation history with 16 messages
+2026-04-10 12:43:31,085 | memory | INFO | Saved conversation history with 17 messages
+2026-04-10 12:43:31,088 | memory | INFO | Saved conversation history with 18 messages
+2026-04-10 12:44:22,728 | agent | INFO | Ran tool 'open_spotify' with input ''
+2026-04-10 12:44:35,344 | memory | INFO | Saved conversation history with 19 messages
+2026-04-10 12:44:35,353 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 12:45:13,560 | agent | INFO | Ran tool 'open_spotify' with input ''
+2026-04-10 12:45:21,875 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 12:45:21,875 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 12:48:54,919 | agent | WARNING | Model returned invalid tool 'PLAY SPOTIFY' for request: play song
+2026-04-10 12:48:57,182 | agent | INFO | Ran tool 'play_youtube' with input 'song'
+2026-04-10 12:48:57,750 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 12:48:57,765 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 12:49:24,953 | agent | WARNING | Model returned invalid tool 'OPEN_APP' for request: play a song in spotify
+2026-04-10 12:49:27,779 | agent | INFO | Ran tool 'play_spotify' with input 'a song'
+2026-04-10 12:49:28,290 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 12:49:28,293 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 12:54:21,007 | agent | INFO | Ran tool 'play_spotify' with input ''
+2026-04-10 12:54:21,007 | agent | INFO | Ran tool 'play_youtube' with input ''
+2026-04-10 12:55:03,861 | agent | INFO | Ran tool 'play_youtube' with input ''
+2026-04-10 12:55:59,078 | agent | WARNING | Ollama chat failed: 500 Server Error: Internal Server Error for url: http://localhost:11434/api/chat
+2026-04-10 12:56:02,146 | agent | INFO | Ran tool 'play_spotify' with input ''
+2026-04-10 12:56:02,653 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 12:56:02,658 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 12:56:32,201 | agent | WARNING | Model skipped tool call for actionable request: play another song
+2026-04-10 12:56:35,026 | agent | INFO | Ran tool 'play_spotify' with input 'another'
+2026-04-10 12:56:35,528 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 12:56:35,535 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 12:58:30,808 | agent | INFO | Ran tool 'next_track' with input ''
+2026-04-10 12:59:14,502 | agent | WARNING | Model skipped tool call for actionable request: play a song
+2026-04-10 12:59:17,564 | agent | INFO | Ran tool 'play_spotify' with input ''
+2026-04-10 12:59:18,067 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 12:59:18,067 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 12:59:47,421 | agent | WARNING | Model skipped tool call for actionable request: play a song
+2026-04-10 12:59:50,481 | agent | INFO | Ran tool 'play_spotify' with input ''
+2026-04-10 12:59:50,983 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 12:59:50,983 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 13:08:40,797 | agent | WARNING | Model skipped tool call for actionable request: another one
+2026-04-10 13:08:40,852 | agent | INFO | Ran tool 'next_track' with input ''
+2026-04-10 13:08:41,355 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 13:08:41,356 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 13:08:48,575 | agent | WARNING | Model skipped tool call for actionable request: play a song
+2026-04-10 13:08:50,550 | agent | WARNING | Model skipped tool call for actionable request: play it
+2026-04-10 13:08:50,611 | agent | INFO | Ran tool 'media_play_pause' with input ''
+2026-04-10 13:08:51,113 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 13:08:51,114 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 13:08:51,874 | agent | INFO | Ran tool 'play_spotify' with input ''
+2026-04-10 13:08:52,376 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 13:08:52,376 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 13:09:10,640 | agent | WARNING | Model skipped tool call for actionable request: play it
+2026-04-10 13:09:10,694 | agent | INFO | Ran tool 'media_play_pause' with input ''
+2026-04-10 13:09:11,198 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 13:09:11,201 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 13:09:11,873 | agent | WARNING | Model skipped tool call for actionable request: play a song
+2026-04-10 13:09:15,059 | agent | INFO | Ran tool 'play_spotify' with input ''
+2026-04-10 13:09:15,561 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 13:09:15,561 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 13:09:46,296 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 13:09:46,298 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 13:09:55,007 | agent | WARNING | Model skipped tool call for actionable request: play a song
+2026-04-10 13:09:58,231 | agent | INFO | Ran tool 'play_spotify' with input ''
+2026-04-10 13:09:58,733 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 13:09:58,733 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 13:14:09,165 | agent | WARNING | Model skipped tool call for actionable request: play believer on spotify
+2026-04-10 13:14:16,838 | agent | INFO | Ran tool 'play_spotify' with input 'believer'
+2026-04-10 13:14:17,340 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 13:14:17,342 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 13:58:04,548 | agent | WARNING | Model skipped tool call for actionable request: play a song
+2026-04-10 13:58:07,849 | agent | INFO | Ran tool 'play_spotify' with input ''
+2026-04-10 13:58:08,351 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 13:58:08,351 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 14:12:34,251 | agent | WARNING | Model skipped tool call for actionable request: play a song
+2026-04-10 14:12:37,650 | agent | INFO | Ran tool 'play_spotify' with input ''
+2026-04-10 14:12:38,153 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 14:12:38,154 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 14:15:37,136 | agent | WARNING | Model skipped tool call for actionable request: play a song
+2026-04-10 14:15:46,374 | agent | INFO | Ran tool 'play_spotify' with input ''
+2026-04-10 14:15:46,876 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 14:15:46,878 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 17:45:06,311 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 17:45:06,313 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 17:48:18,052 | agent | INFO | Ran tool 'get_voice_status' with input ''
+2026-04-10 17:48:18,058 | agent | INFO | Ran tool 'stop_voice_mode' with input ''
+2026-04-10 17:52:25,761 | agent | WARNING | Model skipped tool call for actionable request: open notpad and write hello
+2026-04-10 17:52:27,772 | agent | INFO | Ran tool 'open_app' with input 'notpad and write hello'
+2026-04-10 17:52:28,273 | memory | INFO | Saved conversation history with 20 messages
+2026-04-10 17:52:28,275 | memory | INFO | Saved conversation history with 20 messages
